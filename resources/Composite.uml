@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_THLCIM7TEeeaGp9EIg2haA" name="Composite">
+  <ownedComment xmi:type="uml:Comment" xmi:id="_bblvYM7TEeeaGp9EIg2haA">
+    <body>The Composite [2] design pattern is one of the twenty-three well-known GoF design patterns that describe how to solve recurring design problems to design flexible and reusable object-oriented software, that is, objects that are easier to implement, change, test, and reuse.&#xD;
+What problems can the Composite design pattern solve? [3]&#xD;
+A part-whole hierarchy should be represented so that clients can treat part and whole objects uniformly.&#xD;
+A part-whole hierarchy should be represented as tree structure.&#xD;
+When defining (1) Part objects and (2) Whole objects that act as containers for Part objects, clients must treat them separately, which complicates client code.&#xD;
+What solution does the Composite design pattern describe?&#xD;
+Define a unified Component interface for both part (Leaf) objects and whole (Composite) objects.&#xD;
+Individual Leaf objects implement the Component interface directly, and Composite objects forward requests to their child components.&#xD;
+This enables clients to work through the Component interface to treat Leaf and Composite objects uniformly: Leaf objects perform a request directly, and Composite objects forward the request to their child components recursively downwards the tree structure. This makes client classes easier to implement, change, test, and reuse.&#xD;
+See also the UML class and object diagram below.</body>
+  </ownedComment>
+  <packagedElement xmi:type="uml:Class" xmi:id="_i_Y4AM7TEeeaGp9EIg2haA" name="Client"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_kUBvsM7TEeeaGp9EIg2haA" name="Leaf">
+    <generalization xmi:type="uml:Generalization" xmi:id="_DWhXYM7UEeeaGp9EIg2haA" general="_lYrqoM7TEeeaGp9EIg2haA"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_Ao0bAM7UEeeaGp9EIg2haA" name="operation"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_kXvyEM7TEeeaGp9EIg2haA" name="Composite">
+    <generalization xmi:type="uml:Generalization" xmi:id="_DA6TwM7UEeeaGp9EIg2haA" general="_lYrqoM7TEeeaGp9EIg2haA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_E6mZQs7UEeeaGp9EIg2haA" name="childrens" type="_lYrqoM7TEeeaGp9EIg2haA" aggregation="shared" association="_E6lyMM7UEeeaGp9EIg2haA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_E6nAUM7UEeeaGp9EIg2haA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_E6nAUc7UEeeaGp9EIg2haA" value="*"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_Az1YMM7UEeeaGp9EIg2haA" name="operation"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_lYrqoM7TEeeaGp9EIg2haA" name="Component">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_91uoUM7TEeeaGp9EIg2haA" name="operation"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_5G7W4M7TEeeaGp9EIg2haA" client="_i_Y4AM7TEeeaGp9EIg2haA" supplier="_lYrqoM7TEeeaGp9EIg2haA"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_E6lyMM7UEeeaGp9EIg2haA" memberEnd="_E6mZQs7UEeeaGp9EIg2haA _E6nAUs7UEeeaGp9EIg2haA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_E6mZQM7UEeeaGp9EIg2haA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_E6mZQc7UEeeaGp9EIg2haA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_E6nAUs7UEeeaGp9EIg2haA" name="parent" type="_kXvyEM7TEeeaGp9EIg2haA" association="_E6lyMM7UEeeaGp9EIg2haA"/>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_iRDjkM-dEeeAlvzjNljThQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_iRDjkc-dEeeAlvzjNljThQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+    </eAnnotations>
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_iREKoM-dEeeAlvzjNljThQ" source="duplicatedProfile"/>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+  </profileApplication>
+</uml:Package>

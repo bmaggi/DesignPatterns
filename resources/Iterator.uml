@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Package xmi:id="_lebR0M7JEeeaGp9EIg2haA" name="Iterator">
+    <packagedElement xmi:type="uml:Interface" xmi:id="_vkkbYM7JEeeaGp9EIg2haA" name="Aggregate">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_JM2dIM7KEeeaGp9EIg2haA" name="iterator"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_vpYC4M7JEeeaGp9EIg2haA" name="Iterator">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_JfUGIM7KEeeaGp9EIg2haA" name="next"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_JmiIcM7KEeeaGp9EIg2haA" name="hasNext"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_07BisM7JEeeaGp9EIg2haA" name="ConcreteAggregate">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_4oTFsM7JEeeaGp9EIg2haA" client="_07BisM7JEeeaGp9EIg2haA" supplier="_vkkbYM7JEeeaGp9EIg2haA" contract="_vkkbYM7JEeeaGp9EIg2haA"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_KQCYcM7KEeeaGp9EIg2haA" name="iterator"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_1AKhYM7JEeeaGp9EIg2haA" name="ConcreteIterator">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_4JebsM7JEeeaGp9EIg2haA" client="_1AKhYM7JEeeaGp9EIg2haA" supplier="_vpYC4M7JEeeaGp9EIg2haA" contract="_vpYC4M7JEeeaGp9EIg2haA"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_RoX38M7KEeeaGp9EIg2haA" name="hasNext"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_RoYfAM7KEeeaGp9EIg2haA" name="next"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_5iXhQM7JEeeaGp9EIg2haA" client="_vkkbYM7JEeeaGp9EIg2haA" supplier="_vpYC4M7JEeeaGp9EIg2haA"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_prUTkM7KEeeaGp9EIg2haA" client="_07BisM7JEeeaGp9EIg2haA" supplier="_1AKhYM7JEeeaGp9EIg2haA"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_sXe-4M7KEeeaGp9EIg2haA" memberEnd="_sXgNAc7KEeeaGp9EIg2haA _sXg0Es7KEeeaGp9EIg2haA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_sXfl8M7KEeeaGp9EIg2haA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sXgNAM7KEeeaGp9EIg2haA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_sXg0Es7KEeeaGp9EIg2haA" name="concreteIterator" type="_1AKhYM7JEeeaGp9EIg2haA" association="_sXe-4M7KEeeaGp9EIg2haA"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_sXgNAc7KEeeaGp9EIg2haA" name="concreteaggregate" type="_07BisM7JEeeaGp9EIg2haA" aggregation="shared" association="_sXe-4M7KEeeaGp9EIg2haA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sXg0EM7KEeeaGp9EIg2haA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sXg0Ec7KEeeaGp9EIg2haA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_l0CiIM-dEeeAlvzjNljThQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_l0CiIc-dEeeAlvzjNljThQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_l0CiIs-dEeeAlvzjNljThQ" source="duplicatedProfile"/>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Package>
+  <standard:Create xmi:id="_6hFMQM7JEeeaGp9EIg2haA" base_Usage="_5iXhQM7JEeeaGp9EIg2haA"/>
+  <standard:Create xmi:id="_qiVbIM7KEeeaGp9EIg2haA" base_Usage="_prUTkM7KEeeaGp9EIg2haA"/>
+</xmi:XMI>

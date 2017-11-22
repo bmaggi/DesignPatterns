@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_GIq2QM7REeeaGp9EIg2haA" name="TemplateMethod">
+  <ownedComment xmi:type="uml:Comment" xmi:id="_dOKLIM7REeeaGp9EIg2haA" annotatedElement="_TBPEIM7REeeaGp9EIg2haA">
+    <body>The Template Method [3] design pattern is one of the twenty-three well-known GoF design patterns that describe how to solve recurring design problems to design flexible and reusable object-oriented software, that is, objects that are easier to implement, change, test, and reuse.&#xD;
+What problems can the Template Method design pattern solve? [4]&#xD;
+The invariant parts of a behavior should be implemented only once so that subclasses can implement the variant parts.&#xD;
+Subclasses should redefine only certain parts of a behavior without changing the other parts.&#xD;
+Usually, subclasses control how the behavior of a parent class is redefined, and they aren't restricted to redefine only certain parts of a behavior.&#xD;
+What solution does the Template Method design pattern describe?&#xD;
+Define abstract operations (primitives) for the variant parts of a behavior.&#xD;
+Define a template method that&#xD;
+implements the invariant parts of a behavior and&#xD;
+calls abstract operations (primitives) that subclasses implement.&#xD;
+The template method controls how subclasses redefine a behavior.&#xD;
+This is also referred to as inversion of control because subclasses do no longer control how the behavior of a parent class is redefined.&#xD;
+See also the UML class diagram below.</body>
+  </ownedComment>
+  <packagedElement xmi:type="uml:Class" xmi:id="_NPa2gM7REeeaGp9EIg2haA" name="AbstractClass" isAbstract="true">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_TBPEIM7REeeaGp9EIg2haA" name="fullProcess">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_tlKOwM7REeeaGp9EIg2haA">
+        <body>In the above UML class diagram, the AbstractClass defines a fullProcess() operation that defines the skeleton (template) of a behavior by&#xD;
+implementing the invariant parts of the behavior and&#xD;
+calling abstract step1() and step2() operations to defer implementing the variant parts to SubClass1.</body>
+      </ownedComment>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_TXSMoM7REeeaGp9EIg2haA" name="step1" isAbstract="true"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_Tga6gM7REeeaGp9EIg2haA" name="step2" isAbstract="true"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_NmvKUM7REeeaGp9EIg2haA" name="SubClass">
+    <generalization xmi:type="uml:Generalization" xmi:id="_PfzkwM7REeeaGp9EIg2haA" general="_NPa2gM7REeeaGp9EIg2haA"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_Wl2aYM7REeeaGp9EIg2haA" name="step2"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_Wl4PkM7REeeaGp9EIg2haA" name="step1"/>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_njYY0M-dEeeAlvzjNljThQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_njYY0c-dEeeAlvzjNljThQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+    </eAnnotations>
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_njY_4M-dEeeAlvzjNljThQ" source="duplicatedProfile"/>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+  </profileApplication>
+</uml:Package>

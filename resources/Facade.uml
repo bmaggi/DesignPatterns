@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_cMEUoM7UEeeaGp9EIg2haA" name="Facade">
+  <ownedComment xmi:type="uml:Comment" xmi:id="_-PUXkM7UEeeaGp9EIg2haA">
+    <body>The facade pattern (also spelled façade) is a software design pattern commonly used with object-oriented programming. The name is an analogy to an architectural façade.&#xD;
+A facade is an object that provides a simplified interface to a larger body of code, such as a class library. A facade can&#xD;
+make a software library easier to use, understand, and test, since the facade has convenient methods for common tasks,&#xD;
+make the library more readable, for the same reason,&#xD;
+reduce dependencies of outside code on the inner workings of a library, since most code uses the facade, thus allowing more flexibility in developing the system,&#xD;
+wrap a poorly designed collection of APIs with a single well-designed API.&#xD;
+The Facade design pattern is often used when a system is very complex or difficult to understand because the system has a large number &#xD;
+of interdependent classes or its source code is unavailable. &#xD;
+This pattern hides the complexities of the larger system and provides a simpler interface to the client. &#xD;
+It typically involves a single wrapper class that contains a set of members required by the client. &#xD;
+These members access the system on behalf of the facade client and hide the implementation details.</body>
+  </ownedComment>
+  <packagedElement xmi:type="uml:Class" xmi:id="_fSQCcM7UEeeaGp9EIg2haA" name="Client"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_mbhyQM7UEeeaGp9EIg2haA" name="Facade">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_3QsYkM7UEeeaGp9EIg2haA" name="doSometing"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_qlR14M7UEeeaGp9EIg2haA" client="_fSQCcM7UEeeaGp9EIg2haA" supplier="_mbhyQM7UEeeaGp9EIg2haA"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_r-8-kM7UEeeaGp9EIg2haA" name="Package1">
+    <packagedElement xmi:type="uml:Class" xmi:id="_t0824M7UEeeaGp9EIg2haA" name="Class1"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_setcsM7UEeeaGp9EIg2haA" name="Package2">
+    <packagedElement xmi:type="uml:Class" xmi:id="_uNDN0M7UEeeaGp9EIg2haA" name="Class1"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_v9QAIM7UEeeaGp9EIg2haA" name="Class2"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_wtIk8M7UEeeaGp9EIg2haA" client="_mbhyQM7UEeeaGp9EIg2haA" supplier="_t0824M7UEeeaGp9EIg2haA"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_xYZIcM7UEeeaGp9EIg2haA" client="_mbhyQM7UEeeaGp9EIg2haA" supplier="_setcsM7UEeeaGp9EIg2haA"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_yQnw8M7UEeeaGp9EIg2haA" client="_mbhyQM7UEeeaGp9EIg2haA" supplier="_v9QAIM7UEeeaGp9EIg2haA"/>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_j0hhcM-dEeeAlvzjNljThQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_j0hhcc-dEeeAlvzjNljThQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+    </eAnnotations>
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_j0iIgM-dEeeAlvzjNljThQ" source="duplicatedProfile"/>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+  </profileApplication>
+</uml:Package>

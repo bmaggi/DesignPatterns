@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Package xmi:id="_vyNFQMkXEee3q9a1ZVVyAQ" name="FactoryMethod">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_Ftq3AMkYEee3q9a1ZVVyAQ" annotatedElement="_TAbGgMkYEee3q9a1ZVVyAQ _vyNFQMkXEee3q9a1ZVVyAQ">
+      <body>product=factoryMethod();</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_YjOnwMkYEee3q9a1ZVVyAQ">
+      <body>The Factory Method [1] design pattern is one of the twenty-three well-known GoF design patterns that describe how to solve recurring design problems to design flexible and reusable object-oriented software, that is, objects that are easier to implement, change, test, and reuse.&#xD;
+&#xD;
+The Factory Method design pattern solves problems like: [2]&#xD;
+&#xD;
+How can an object be created so that subclasses can redefine which class to instantiate?&#xD;
+How can a class defer instantiation to subclasses?&#xD;
+&#xD;
+Creating an object directly within the class that requires (uses) the object is inflexible because it commits the class to a particular object and makes it impossible to change the instantiation independently from (without having to change) the class.&#xD;
+&#xD;
+The Factory Method design pattern describes how to solve such problems:&#xD;
+Define a separate operation (factory method) for creating an object.&#xD;
+Create an object by calling a factory method.&#xD;
+This enables writing of subclasses to change the way an object is created (to redefine which class to instantiate).&#xD;
+&#xD;
+See also the UML class diagram</body>
+    </ownedComment>
+    <packagedElement xmi:type="uml:Class" xmi:id="_3FIgUMkXEee3q9a1ZVVyAQ" name="Creator">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_AIWNQMkYEee3q9a1ZVVyAQ" name="product" type="_3xjhcMkXEee3q9a1ZVVyAQ" association="_AIQGoMkYEee3q9a1ZVVyAQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AIW0UMkYEee3q9a1ZVVyAQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AIW0UckYEee3q9a1ZVVyAQ" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Ooy-8MkYEee3q9a1ZVVyAQ" name="factoryMethod" isAbstract="true"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_TAbGgMkYEee3q9a1ZVVyAQ" name="operation"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_3xjhcMkXEee3q9a1ZVVyAQ" name="Product"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_4hOq4MkXEee3q9a1ZVVyAQ" name="Product1">
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Cym0EMkYEee3q9a1ZVVyAQ" client="_4hOq4MkXEee3q9a1ZVVyAQ" supplier="_3xjhcMkXEee3q9a1ZVVyAQ" contract="_3xjhcMkXEee3q9a1ZVVyAQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_5cSk8MkXEee3q9a1ZVVyAQ" name="Creator1">
+      <generalization xmi:type="uml:Generalization" xmi:id="_EjIWgMkYEee3q9a1ZVVyAQ" general="_3FIgUMkXEee3q9a1ZVVyAQ"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_NFupsMkYEee3q9a1ZVVyAQ" name="factoryMethod"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_AIQGoMkYEee3q9a1ZVVyAQ" memberEnd="_AIWNQMkYEee3q9a1ZVVyAQ _AIXbYMkYEee3q9a1ZVVyAQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_AITJ8MkYEee3q9a1ZVVyAQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_AITxAMkYEee3q9a1ZVVyAQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_AIXbYMkYEee3q9a1ZVVyAQ" name="creator" type="_3FIgUMkXEee3q9a1ZVVyAQ" association="_AIQGoMkYEee3q9a1ZVVyAQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_l0u6EMkYEee3q9a1ZVVyAQ" client="_5cSk8MkXEee3q9a1ZVVyAQ" supplier="_4hOq4MkXEee3q9a1ZVVyAQ"/>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_qu6gsM-dEeeAlvzjNljThQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qu6gsc-dEeeAlvzjNljThQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qu6gss-dEeeAlvzjNljThQ" source="duplicatedProfile"/>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Package>
+  <standard:Create xmi:id="_naDSEMkYEee3q9a1ZVVyAQ" base_Usage="_l0u6EMkYEee3q9a1ZVVyAQ"/>
+</xmi:XMI>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_6uZ88M7REeeaGp9EIg2haA" name="Strategy">
+  <ownedComment xmi:type="uml:Comment" xmi:id="_TPJH0M7SEeeaGp9EIg2haA" annotatedElement="__ejSMM7REeeaGp9EIg2haA">
+    <body>In the above UML class diagram, the Context class doesn't implement an algorithm directly. &#xD;
+Instead, Context refers to the Strategy interface for performing an algorithm (strategy.algorithm()), &#xD;
+which makes Context independent of how an algorithm is implemented. &#xD;
+The Strategy1 and Strategy2 classes implement the Strategy interface, that is, implement (encapsulate) an algorithm.&#xD;
+The UML sequence diagram shows the run-time interactions: The Context object delegates an algorithm to different Strategy objects. First, Context calls algorithm() on a Strategy1 object, which performs the algorithm and returns the result to Context. Thereafter, Context changes its strategy and calls algorithm() on a Strategy2 object, which performs the algorithm and returns the result to Context.</body>
+  </ownedComment>
+  <packagedElement xmi:type="uml:Class" xmi:id="_-3n1EM7REeeaGp9EIg2haA" name="Context">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_CgMeQM7SEeeaGp9EIg2haA" name="operation"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="__ejSMM7REeeaGp9EIg2haA" name="IStrategy">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_Co3SEM7SEeeaGp9EIg2haA" name="algorithm"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_AT0tUM7SEeeaGp9EIg2haA" name="Strategy1">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Hys5sM7SEeeaGp9EIg2haA" client="_AT0tUM7SEeeaGp9EIg2haA" supplier="__ejSMM7REeeaGp9EIg2haA" contract="__ejSMM7REeeaGp9EIg2haA"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_FEHzkM7SEeeaGp9EIg2haA" name="algorithm"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Ak-uwM7SEeeaGp9EIg2haA" name="Strategy2">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_IMboUM7SEeeaGp9EIg2haA" client="_Ak-uwM7SEeeaGp9EIg2haA" supplier="__ejSMM7REeeaGp9EIg2haA" contract="__ejSMM7REeeaGp9EIg2haA"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_FKYMkM7SEeeaGp9EIg2haA" name="algorithm"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_QQm6IM7SEeeaGp9EIg2haA" client="_-3n1EM7REeeaGp9EIg2haA" supplier="__ejSMM7REeeaGp9EIg2haA"/>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_omk7MM-dEeeAlvzjNljThQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_omk7Mc-dEeeAlvzjNljThQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+    </eAnnotations>
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_omliQM-dEeeAlvzjNljThQ" source="duplicatedProfile"/>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+  </profileApplication>
+</uml:Package>

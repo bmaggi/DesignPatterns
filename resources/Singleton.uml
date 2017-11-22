@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Package xmi:id="_nC0vwMkWEee3q9a1ZVVyAQ" name="Singleton">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_ZrMx4MkXEee3q9a1ZVVyAQ" annotatedElement="_nC0vwMkWEee3q9a1ZVVyAQ">
+      <body>In software engineering, the singleton pattern is a software design pattern that restricts the instantiation of a class to one object.&#xD;
+This is useful when exactly one object is needed to coordinate actions across the system. &#xD;
+The concept is sometimes generalized to systems that operate more efficiently when only one object exists, or that restrict the instantiation to a certain number of objects. &#xD;
+The term comes from the mathematical concept of a singleton.&#xD;
+There are some who are critical of the singleton pattern and consider it to be an anti-pattern in that it is frequently used in scenarios where it is not beneficial,&#xD;
+ introduces unnecessary restrictions in situations where a sole instance of a class is not actually required, and introduces global state into an application.[1][2][3]</body>
+    </ownedComment>
+    <packagedElement xmi:type="uml:Class" xmi:id="_z7BKMMkWEee3q9a1ZVVyAQ" name="Singleton">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_3aWX0MkWEee3q9a1ZVVyAQ" name="singleton" visibility="private" isStatic="true" type="_z7BKMMkWEee3q9a1ZVVyAQ"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_4qnF0MkWEee3q9a1ZVVyAQ" name="Singleton" visibility="private"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_46YAIMkWEee3q9a1ZVVyAQ" name="getInstance" isStatic="true">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_KhirIMkXEee3q9a1ZVVyAQ" type="_z7BKMMkWEee3q9a1ZVVyAQ" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_WbVSwM-dEeeAlvzjNljThQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_WbVSwc-dEeeAlvzjNljThQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_WbY9IM-dEeeAlvzjNljThQ" source="duplicatedProfile"/>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Package>
+  <standard:Create xmi:id="_PH05wMkXEee3q9a1ZVVyAQ" base_BehavioralFeature="_4qnF0MkWEee3q9a1ZVVyAQ"/>
+</xmi:XMI>
