@@ -1,5 +1,5 @@
-## DesignPatterns
-A Papyrus model containing some classic design patterns
+## Design Patterns
+A [Papyrus](http://www.eclipse.org/papyrus/) model containing some classic design patterns
 
 ### Modelling flavor 
 - each pattern should be in an independant "controlled model"
