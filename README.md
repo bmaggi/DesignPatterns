@@ -1,9 +1,9 @@
 ## Design Patterns
 A [Papyrus](http://www.eclipse.org/papyrus/) model containing some classic design patterns
 
-### Modelling flavor 
-- each pattern should be in an independant "controlled model"
-- desciption should be done use a majority of Documentation (also some pure UML comment)
+### Modeling flavor 
+- each pattern should be in an independent "controlled model"
+- description should be done use a majority of Documentation (also some pure UML comment)
    - documentation for property should be 2/3 lines
    - documentation for package should be 20/30 lines
    

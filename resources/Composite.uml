@@ -14,11 +14,9 @@ See also the UML class and object diagram below.</body>
   </ownedComment>
   <packagedElement xmi:type="uml:Class" xmi:id="_i_Y4AM7TEeeaGp9EIg2haA" name="Client"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_kUBvsM7TEeeaGp9EIg2haA" name="Leaf">
-    <generalization xmi:type="uml:Generalization" xmi:id="_DWhXYM7UEeeaGp9EIg2haA" general="_lYrqoM7TEeeaGp9EIg2haA"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_Ao0bAM7UEeeaGp9EIg2haA" name="operation"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_kXvyEM7TEeeaGp9EIg2haA" name="Composite">
-    <generalization xmi:type="uml:Generalization" xmi:id="_DA6TwM7UEeeaGp9EIg2haA" general="_lYrqoM7TEeeaGp9EIg2haA"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_E6mZQs7UEeeaGp9EIg2haA" name="childrens" type="_lYrqoM7TEeeaGp9EIg2haA" aggregation="shared" association="_E6lyMM7UEeeaGp9EIg2haA">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_E6nAUM7UEeeaGp9EIg2haA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_E6nAUc7UEeeaGp9EIg2haA" value="*"/>
@@ -35,6 +33,8 @@ See also the UML class and object diagram below.</body>
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_E6nAUs7UEeeaGp9EIg2haA" name="parent" type="_kXvyEM7TEeeaGp9EIg2haA" association="_E6lyMM7UEeeaGp9EIg2haA"/>
   </packagedElement>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_Miw9oGAVEeigl92aD34HpA" client="_kXvyEM7TEeeaGp9EIg2haA" supplier="_lYrqoM7TEeeaGp9EIg2haA"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_M-qPcGAVEeigl92aD34HpA" client="_kUBvsM7TEeeaGp9EIg2haA" supplier="_lYrqoM7TEeeaGp9EIg2haA"/>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_iRDjkM-dEeeAlvzjNljThQ">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_iRDjkc-dEeeAlvzjNljThQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
       <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
