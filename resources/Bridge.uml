@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_NJn4MGTJEeihxK_PUfd45w" name="Bridge">
+  <ownedComment xmi:type="uml:Comment" xmi:id="_hiRkoGTPEeihxK_PUfd45w">
+    <body>The bridge pattern is a design pattern used in software engineering that is meant to &quot;decouple an abstraction from its implementation so that the two can vary independently&quot;, introduced by the Gang of Four. The bridge uses encapsulation, aggregation, and can use inheritance to separate responsibilities into different classes.</body>
+  </ownedComment>
+  <packagedElement xmi:type="uml:Class" xmi:id="_cxaFYGTJEeihxK_PUfd45w" name="Abstraction">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Q_F4cGTKEeihxK_PUfd45w" name="impl" visibility="public" type="_jTDNcGTJEeihxK_PUfd45w" aggregation="shared" association="_Q_AY4GTKEeihxK_PUfd45w">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Q_GfgGTKEeihxK_PUfd45w"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Q_HGkGTKEeihxK_PUfd45w" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_V1xTgGTKEeihxK_PUfd45w" name="function">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_X8kA4GTKEeihxK_PUfd45w" annotatedElement="_cxaFYGTJEeihxK_PUfd45w">
+        <body>this.impl.implementation()</body>
+      </ownedComment>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jTDNcGTJEeihxK_PUfd45w" name="Implementor">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_T1jvQGTKEeihxK_PUfd45w" name="implementation"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jyx2YGTJEeihxK_PUfd45w" name="RefinedAbstraction">
+    <generalization xmi:type="uml:Generalization" xmi:id="_QKkEMGTKEeihxK_PUfd45w" general="_cxaFYGTJEeihxK_PUfd45w"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_W4-c8GTKEeihxK_PUfd45w" name="function"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_kFyR8GTJEeihxK_PUfd45w" name="ConcreteImplementor">
+    <generalization xmi:type="uml:Generalization" xmi:id="_hvIuMGTKEeihxK_PUfd45w" general="_jTDNcGTJEeihxK_PUfd45w"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_S0X_EGTKEeihxK_PUfd45w" name="implementation"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Q_AY4GTKEeihxK_PUfd45w" memberEnd="_Q_F4cGTKEeihxK_PUfd45w _Q_HGkWTKEeihxK_PUfd45w">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Q_C1IGTKEeihxK_PUfd45w" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Q_C1IWTKEeihxK_PUfd45w" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Q_HGkWTKEeihxK_PUfd45w" name="abstraction" type="_cxaFYGTJEeihxK_PUfd45w" association="_Q_AY4GTKEeihxK_PUfd45w"/>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_uFTAUGTPEeihxK_PUfd45w">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uFTAUWTPEeihxK_PUfd45w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+    </eAnnotations>
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uFTnYGTPEeihxK_PUfd45w" source="duplicatedProfile"/>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+  </profileApplication>
+</uml:Package>

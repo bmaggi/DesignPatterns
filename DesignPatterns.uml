@@ -7,6 +7,7 @@
     <packagedElement xmi:type="uml:Package" href="resources/Adapter.uml#_iVifMM7SEeeaGp9EIg2haA"/>
     <packagedElement xmi:type="uml:Package" href="resources/Composite.uml#_THLCIM7TEeeaGp9EIg2haA"/>
     <packagedElement xmi:type="uml:Package" href="resources/Facade.uml#_cMEUoM7UEeeaGp9EIg2haA"/>
+    <packagedElement xmi:type="uml:Package" href="resources/Bridge.uml#_NJn4MGTJEeihxK_PUfd45w"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_S8q50MkWEee3q9a1ZVVyAQ" name="Behavioral">
     <packagedElement xmi:type="uml:Package" href="resources/Iterator.uml#_lebR0M7JEeeaGp9EIg2haA"/>
